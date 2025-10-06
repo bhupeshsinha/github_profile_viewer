@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background 1s ease, color 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ================== THEME STYLES ================== */
+
+.light-theme {
+  background: linear-gradient(135deg, #fefefe, #e7f0ff);
+  color: #1a1a1a;
+}
+
+.dark-theme {
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+  color: #f0f0f0;
+}
+
+.blue-theme {
+  background: linear-gradient(135deg, #0078d4, #00b4ff, #6ee2f5);
+  color: #ffffff;
+}
+
+.pastel-theme {
+  background: linear-gradient(135deg, #fce1ec, #c6f0ff, #f9f1e7);
+  color: #333;
+}
+
+.neon-theme {
+  background: radial-gradient(circle at top left, #ff00c8, #00f0ff, #ff6a00);
+  color: #fff;
+}
+
+.sunset-theme {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
+}
+
+.forest-theme {
+  background: linear-gradient(135deg, #5a9367, #a8e6cf);
+  color: #fff;
+}
+
+.cyberpunk-theme {
+  background: linear-gradient(135deg, #2b1055, #7597de, #ff00c8);
+  color: #fff;
+}
+
+/* ================== STRUCTURE ================== */
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.theme-select select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.theme-select select:hover {
+  transform: scale(1.05);
+}
+
+/* ================== SEARCH BOX ================== */
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease;
+}
+
+.search-box input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 10px rgba(0,120,212,0.3);
+}
+
+.search-box button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* ================== PROFILE CARD ================== */
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px 25px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  animation: fadeIn 0.8s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.profile-image img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.7);
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.08);
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats strong {
+  font-size: 1.3rem;
+  color: #0078d4;
+}
+
+.visit-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: #0078d4;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.visit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,120,212,0.4);
+}
+
+/* ================== STATE MESSAGES ================== */
+
+.placeholder {
+  opacity: 0.7;
+}
+
+.not-found {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+
+.loading {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ================== ANIMATIONS ================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
