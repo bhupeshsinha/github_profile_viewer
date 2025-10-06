@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Viewer</title>
+  <link rel="stylesheet" href="style_option.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>GitHub Profile Viewer</h1>
+
+      <div class="theme-select">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+          <option value="light">🌞 Light</option>
+          <option value="dark">🌙 Dark</option>
+          <option value="blue">🔵 Ocean Blue</option>
+          <option value="pastel">🌸 Pastel Bloom</option>
+          <option value="neon">🌈 Neon Pulse</option>
+          <option value="sunset">🌅 Sunset Glow</option>
+          <option value="forest">🌲 Forest Mist</option>
+          <option value="cyberpunk">🟪 Cyberpunk</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="userID" placeholder="Enter GitHub username..." />
+      <button id="btn">Search</button>
+    </div>
+
+    <section id="userProfile" class="profile-section">
+      <p class="placeholder">Search for a GitHub user to see their profile...</p>
+    </section>
+  </div>
+
+  <script src="index_option.js"></script>
+</body>
+</html>
